@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS links (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  slug TEXT NOT NULL UNIQUE,
+  target_url TEXT NOT NULL,
+  clicks INTEGER NOT NULL DEFAULT 0,
+  active INTEGER NOT NULL DEFAULT 1,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  last_clicked_at TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_links_slug ON links(slug);
+CREATE INDEX IF NOT EXISTS idx_links_created_at ON links(created_at);
+
+CREATE TABLE IF NOT EXISTS settings (
+  key TEXT PRIMARY KEY,
+  value TEXT NOT NULL
+);

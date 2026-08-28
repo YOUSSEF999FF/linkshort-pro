@@ -1,0 +1,8 @@
+name = "linkshort-pro"
+main = "src/index.js"
+compatibility_date = "2026-08-28"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "linkshort-db"
+database_id = "REPLACE_WITH_DATABASE_ID"
